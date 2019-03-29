@@ -89,7 +89,8 @@ namespace Attendance_PC_master
                     while (reader.Read())
                     {
                         //MessageBox.Show(reader[0].ToString());
-                        if (reader.GetString(3).ToString() == tbPasswd.Text)
+                        if (reader.GetString(3).ToString() == tbPasswd.Text&&
+                            (reader.GetString(2)==tbUserName.Text||reader.GetString(4)==tbUserName.Text))
                         {
                             //跳转界面
                             this.DialogResult = DialogResult.OK;
